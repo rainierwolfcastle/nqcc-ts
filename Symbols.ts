@@ -1,0 +1,10 @@
+import { Type } from "./Types.ts";
+export interface Symbol { type: Type, attrs?: IdentifierAttrs };
+export type InitialValue = Tentative | Initial | NoInitializer;
+export interface Tentative { tag: "tentative" };
+export interface Initial { tag: "initial"; value: number };
+export interface NoInitializer { tag: "noinitializer" };
+export type IdentifierAttrs = FunAttr | StaticAttr | LocalAttr;
+export interface FunAttr { tag: "funattr"; defined: boolean; global: boolean };
+export interface StaticAttr { tag: "staticattr"; init: InitialValue; global: boolean };
+export interface LocalAttr { tag: "localattr"; };

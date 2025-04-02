@@ -1,0 +1,41 @@
+export type TokenType =
+    "LeftParen" |
+    "RightParen" |
+    "LeftBrace" |
+    "RightBrace" |
+    "Comma" |
+    "Plus" |
+    "Semicolon" |
+    "Slash" |
+    "Star" |
+    "Tilde" |
+    "Hyphen" |
+    "HyphenHyphen" |
+    "Identifier" |
+    "Constant" |
+    "Int" |
+    "Void" |
+    "Return" |
+    "Percent" |
+    "Bang" |
+    "AmpersandAmpersand" |
+    "VerticalBarVerticalBar" |
+    "EqualEqual" |
+    "BangEqual" |
+    "Equal" |
+    "LessThan" |
+    "MoreThan" |
+    "LessThanEqual" |
+    "MoreThanEqual" |
+    "If" |
+    "Else" |
+    "TernaryIf" |
+    "TernaryElse" |
+    "Do" |
+    "While" |
+    "For" |
+    "Break" |
+    "Continue" |
+    "Static" |
+    "Extern";
+export interface Token { type: TokenType; lexeme: string; };
